@@ -14,5 +14,23 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+
+    'arrow-body-style': ['error', 'as-needed'],
+    'semi': ['error', 'always'],
+    'max-len': ['error', { 'code': 120 }],
+
+
+    'quotes': 'off',
+    '@typescript-eslint/quotes': ['error', 'single'],
+
+    'no-extra-semi': 'off',
+    '@typescript-eslint/no-extra-semi': 'error',
+
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+
+    'indent': 'off',
+    '@typescript-eslint/indent': ["error", 2, { "MemberExpression": 1 }],
+
   },
 }

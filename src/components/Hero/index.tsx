@@ -1,0 +1,19 @@
+import { Button, ButtonText } from '../../ui/Buttons';
+import { BtnGroup, HeroHeading, HeroSubHeading, HeroWrapper, HeroWrapper1, HeroWrapper2 } from './styles';
+
+const Hero: React.FC = () => (
+  <HeroWrapper>
+    <HeroWrapper1>
+      <HeroWrapper2>
+        <HeroHeading>Старе місто Львів</HeroHeading>
+        <HeroSubHeading>Міжнародний Благодійний Фонд</HeroSubHeading>
+        <BtnGroup>
+          <Button>Задонатити</Button>
+          <ButtonText>Про нас →</ButtonText>
+        </BtnGroup>
+      </HeroWrapper2>
+    </HeroWrapper1>
+  </HeroWrapper>
+);
+
+export default Hero;
