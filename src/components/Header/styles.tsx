@@ -18,17 +18,16 @@ interface HeaderProps {
   position?: string;
   top?: string | number;
   width: string;
+  $maxWidth?: string;
 }
 
 export const Header = styled.header<HeaderProps>`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+
   transition: all 0.2s ease-in;
 
   background-color: ${({ theme }) => theme.color.white};
   border-radius: ${({ $borderRadius }) => $borderRadius};
-  max-width: ${({ theme }) => theme.size.maxwidth};
+  max-width: ${({ $maxWidth }) => $maxWidth};
   padding: ${({ theme }) => `0 ${theme.space.threeunits}`};
   position: ${({ position }) => position};
   top: ${({ top }) => top};
@@ -36,6 +35,17 @@ export const Header = styled.header<HeaderProps>`
   z-index: ${({ $ZIndex }) => $ZIndex};
 `;
 
+interface HeaderContainerProps {}
+
+export const HeaderContainer = styled.div<HeaderContainerProps>`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0 auto;
+  max-width: ${({ theme }) => theme.size.maxwidth};
+`;
 interface LogoProps {}
 
 export const Logo = styled.img<LogoProps>`
