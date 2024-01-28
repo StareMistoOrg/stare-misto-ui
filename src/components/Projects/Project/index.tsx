@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   Image,
   ImageWrapper,
@@ -9,29 +7,34 @@ import {
   ProjectTitle,
 } from './styles';
 import img from '../../../assets/project_1.jpg';
+import useTimer from '../../../hooks/useTimer';
 
 interface ProjectProp {
   title: string;
   description: string;
   id: number;
-  date?: string;
+  date: string;
   monoPath?: string;
-  imgPath?: any;
+  imgPath: string;
 }
 
-const Project: React.FC<ProjectProp> = props => (
-  <ProjectCard>
-    <ProjectCardContainer>
-      <ProjectTitle>{props.title}</ProjectTitle>
-      <ImageWrapper>
-        <Image
-          src={img}
-          alt='img'
-        />
-      </ImageWrapper>
-      <ProjectDescription>{props.description}</ProjectDescription>
-    </ProjectCardContainer>
-  </ProjectCard>
-);
+const Project: React.FC<ProjectProp> = props => {
+  const { days, hours, minutes, seconds } = useTimer(props.date);
+
+  return (
+    <ProjectCard data-label={`${days}d ${hours}h ${minutes}m ${seconds}s`}>
+      <ProjectCardContainer>
+        <ProjectTitle>{props.title}</ProjectTitle>
+        <ImageWrapper>
+          <Image
+            src={img}
+            alt='img'
+          />
+        </ImageWrapper>
+        <ProjectDescription>{props.description}</ProjectDescription>
+      </ProjectCardContainer>
+    </ProjectCard>
+  );
+};
 
 export default Project;
