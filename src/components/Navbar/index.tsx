@@ -6,19 +6,20 @@ const menuList = [
   { id: 4, name: 'Events' },
   { id: 5, name: 'Contact' },
 ];
-
 interface NavbarProps {
-  color: string;
-  hovercolor: string;
+  color?: string;
+  hovercolor?: string;
+  $flexDirection?: string;
 }
 
 const Navbar: React.FC<NavbarProps> = props => {
-  const { color, hovercolor } = props;
+  const { color, hovercolor, $flexDirection } = props;
 
   const styles = { color, hovercolor };
+
   return (
-    <DesktopMenuWrapper>
-      <HomeLinks>
+    <DesktopMenuWrapper >
+      <HomeLinks $flexDirection={$flexDirection}>
         {menuList.map(menu => (
           <HomeLink
             key={menu.id}
