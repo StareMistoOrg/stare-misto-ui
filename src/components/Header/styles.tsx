@@ -64,16 +64,3 @@ export const NavWrapper = styled.div<NavWrapperProps>`
     display: none;
   }
 `;
-
-interface BurgerMenuProps {}
-
-export const BurgerMenu = styled.span<BurgerMenuProps>`
-  display: none;
-  font-size: 36px;
-  color: ${({ theme }) => theme.color.primary100};
-  cursor: pointer;
-
-  @media ${({ theme }) => theme.media.medium} {
-    display: block;
-  }
-`;

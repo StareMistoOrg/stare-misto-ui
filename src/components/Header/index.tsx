@@ -1,8 +1,11 @@
-import { HeaderWrapper, Header, Logo, NavWrapper, BurgerMenu, HeaderContainer } from './styles';
-import logoImg from '../../assets/logo.svg';
-import Navbar from '../Navbar';
-import { theme } from '../../theme';
 import { useEffect, useState } from 'react';
+
+import Burger from '../Sidebar/Burger';
+import Navbar from '../Navbar';
+import logoImg from '../../assets/logo.svg';
+import { theme } from '../../theme';
+
+import { HeaderWrapper, Header, Logo, NavWrapper, HeaderContainer } from './styles';
 
 const initHeaderStyle = {
   $borderRadius: '50px',
@@ -50,7 +53,7 @@ const HeaderComponent: React.FC = () => {
           <NavWrapper>
             <Navbar {...styles} />
           </NavWrapper>
-          <BurgerMenu>&#9776;</BurgerMenu>
+          <Burger />
         </HeaderContainer>
       </Header>
     </HeaderWrapper>

@@ -8,19 +8,21 @@ export const DesktopMenuWrapper = styled.div<DesktopMenuWrapperProps>`
   justify-content: space-between;
 `;
 
-interface HomeLinksProps {}
+interface HomeLinksProps {
+  $flexDirection?: string;
+}
 
 export const HomeLinks = styled.nav<HomeLinksProps>`
   flex: 1;
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: center;
+  flex-direction: ${({ $flexDirection }) => $flexDirection || 'row'};
 `;
 
 interface HomeLinkProps {
-  color: string;
-  hovercolor: string;
+  color?: string;
+  hovercolor?: string;
 }
 
 export const HomeLink = styled.a<HomeLinkProps>`
