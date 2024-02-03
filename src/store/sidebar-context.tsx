@@ -24,16 +24,20 @@ function sidebarReducer(state: SidebarState, action: Action) {
       open: !state.open,
     };
   }
+
+  return state;
 }
 
 interface SidebarProviderProps {
   children: ReactNode;
 }
 
+const initialState: SidebarState = {
+  open: false,
+};
+
 const SidebarProvider: React.FC<SidebarProviderProps> = ({ children }) => {
-  const [sidebarState, sidebarDispatch] = useReducer(sidebarReducer, {
-    open: false,
-  });
+  const [sidebarState, sidebarDispatch] = useReducer(sidebarReducer, initialState);
 
   const handleTriggerSidebar = () => {
     sidebarDispatch({ type: 'TRIGGER_SIDEBAR' });
