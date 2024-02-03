@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0;
     width: 2rem;
   }
-`,ts=fe.createContext({open:!1,handleTriggerSidebar:()=>{}});function V1(e,t){return t.type==="TRIGGER_SIDEBAR"?{open:!e.open}:e}const Q1={open:!1},G1=({children:e})=>{const[t,n]=fe.useReducer(V1,Q1),r=()=>{n({type:"TRIGGER_SIDEBAR"})},o={open:t==null?void 0:t.open,handleTriggerSidebar:r};return C.jsx(ts.Provider,{value:o,children:e})},Y1=()=>{const{open:e,handleTriggerSidebar:t}=fe.useContext(ts);if(e)document.body.style.position="fixed",document.body.style.top=`-${window.scrollY}px`;else{const n=document.body.style.top;document.body.style.position="",document.body.style.top="",window.scrollTo(0,parseInt(n||"0")*-1)}return C.jsxs(W1,{open:e,onClick:t,children:[C.jsx("div",{}),C.jsx("div",{}),C.jsx("div",{})]})},K1=j.div`
+`,ts=fe.createContext({open:!1,handleTriggerSidebar:()=>{}});function V1(e,t){return t.type==="TRIGGER_SIDEBAR"?{open:!e.open}:e}const Q1={open:!1},G1=({children:e})=>{const[t,n]=fe.useReducer(V1,Q1),r=()=>{n({type:"TRIGGER_SIDEBAR"})},o={open:t==null?void 0:t.open,handleTriggerSidebar:r};return C.jsx(ts.Provider,{value:o,children:e})},Y1=()=>{const{open:e,handleTriggerSidebar:t}=fe.useContext(ts);return e?(document.body.style.position="fixed",document.body.style.top=`-${window.scrollY}px`):(document.body.style.position="",document.body.style.top=""),C.jsxs(W1,{open:e,onClick:t,children:[C.jsx("div",{}),C.jsx("div",{}),C.jsx("div",{})]})},K1=j.div`
   flex: 1;
   display: flex;
   justify-content: space-between;
