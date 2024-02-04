@@ -13,6 +13,6 @@ const Sidebar: React.FC = () => {
     </SidebarStyled>
   );
 
-  return createPortal(sidebarContent, document.getElementById('sidebar'));
+  return createPortal(sidebarContent, document.getElementById('sidebar')!);
 };
 export default Sidebar;

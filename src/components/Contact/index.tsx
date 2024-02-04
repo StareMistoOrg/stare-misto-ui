@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
 
   const [message, setMessage] = useState('');
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (fullNameIsInvalid || emailIsInvalid || phoneIsInvalid) {
