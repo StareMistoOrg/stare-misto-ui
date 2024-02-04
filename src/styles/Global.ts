@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { theme } from '../theme';
 
 export default createGlobalStyle`
@@ -27,4 +27,17 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: ${theme.color.primary300};
 }
+`;
+
+interface BtnGroupProps {
+  $justifyContent?: string;
+}
+
+export const BtnGroup = styled.div<BtnGroupProps>`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: ${({ $justifyContent }) => $justifyContent || 'center'};
+  gap: ${({ theme }) => theme.space.oneandhalfunits};
 `;

@@ -11,6 +11,7 @@ interface ThemeProps {
     gray900: string;
     black: string;
     white: string;
+    error: string;
   };
   space: {
     halfunit: string;
@@ -36,6 +37,7 @@ interface ThemeProps {
     radius2: string;
     radius4: string;
     radius8: string;
+    radius16: string;
   };
   media: {
     extraLarge: string;
@@ -52,12 +54,13 @@ export const theme: ThemeProps = {
     primary500: '#14A9FF',
     primary700: '#85DCFF',
     secondary: '#ffdd00',
-    gray500: '#595959',
+    gray500: '#D9D9D9',
     gray700: '#999999',
-    gray800: '#595959',
-    gray900: '#D9D9D9',
+    gray800: '#757575',
+    gray900: '#595959',
     black: '#000000',
     white: '#FFFFFF',
+    error: '#E34F4F',
   },
   size: {
     xsmall: '16px',
@@ -73,6 +76,7 @@ export const theme: ThemeProps = {
     radius2: '2px',
     radius4: '4px',
     radius8: '8px',
+    radius16: '16px',
   },
   space: {
     halfunit: '8px',

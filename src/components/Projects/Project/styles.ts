@@ -3,13 +3,13 @@ import styled from 'styled-components';
 interface ProjectCardProps {}
 
 export const ProjectCard = styled.article<ProjectCardProps>`
-  width: 100%;
-  display: flex;
-  position: relative;
   align-items: flex-start;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: 100%;
 
   background-color: ${({ theme }) => theme.color.white};
   border-radius: ${({ theme }) => theme.radius.radius8};
@@ -56,9 +56,9 @@ export const ProjectCardContainer = styled.div<ProjectCardContainerProps>`
   position: relative;
   width: 100%;
 
+  border-radius: ${({ theme }) => theme.radius.radius8};
   gap: ${({ theme }) => theme.space.unit};
   padding: ${({ theme }) => theme.space.twounits};
-  border-radius: ${({ theme }) => theme.radius.radius8};
 `;
 
 interface ProjectTitleProps {}
@@ -79,8 +79,8 @@ export const ProjectDescription = styled.p<ProjectDescriptionProps>`
 interface ImageProps {}
 
 export const Image = styled.img<ImageProps>`
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 
   border-radius: ${({ theme }) => theme.radius.radius8};
 `;

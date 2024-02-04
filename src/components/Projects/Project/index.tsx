@@ -10,12 +10,12 @@ import img from '../../../assets/project_1.jpg';
 import useTimer from '../../../hooks/useTimer';
 
 interface ProjectProp {
-  title: string;
+  date: string;
   description: string;
   id: number;
-  date: string;
-  monoPath?: string;
   imgPath: string;
+  monoPath?: string;
+  title: string;
 }
 
 const Project: React.FC<ProjectProp> = props => {

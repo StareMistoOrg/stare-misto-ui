@@ -3,23 +3,23 @@ import styled from 'styled-components';
 interface ProjectsProps {}
 
 export const Projects = styled.section<ProjectsProps>`
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  display: flex;
   align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  height: auto;
   justify-content: center;
+  width: 100%;
 `;
 
 interface ProjectsWrapperProps {}
 
 export const ProjectsWrapper = styled.div<ProjectsWrapperProps>`
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   justify-content: center;
+  width: 100%;
 
   background-color: ${({ theme }) => theme.color.secondary};
 `;
@@ -27,11 +27,11 @@ export const ProjectsWrapper = styled.div<ProjectsWrapperProps>`
 interface ProjectsWrapperProps1 {}
 
 export const ProjectsWrapper1 = styled.div<ProjectsWrapperProps1>`
-  width: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
 
   gap: ${({ theme }) => theme.space.threeunits};
   max-width: ${({ theme }) => theme.size.maxwidth};
@@ -41,8 +41,8 @@ export const ProjectsWrapper1 = styled.div<ProjectsWrapperProps1>`
 interface ProjectsContainerProps {}
 
 export const ProjectsContainer = styled.div<ProjectsContainerProps>`
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
 `;
@@ -58,6 +58,7 @@ interface ProjectsHeadingProps {}
 
 export const ProjectsHeading = styled.h2<ProjectsHeadingProps>`
   line-height: 1.6;
+
   margin-bottom: ${({ theme }) => theme.space.oneandhalfunits};
 `;
 
@@ -67,15 +68,16 @@ export const ProjectsSubHeading = styled.h3<ProjectsSubHeadingProps>`
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
+
   color: ${({ theme }) => theme.color.gray500};
 `;
 
 interface ProjectsListContainerProps {}
 
 export const ProjectsListContainer = styled.div<ProjectsListContainerProps>`
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
 
   grid-gap: ${({ theme }) => theme.space.twounits};
 

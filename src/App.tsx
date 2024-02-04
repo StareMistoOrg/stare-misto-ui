@@ -1,4 +1,4 @@
-import GlobalStyles from '../src/ui/Global';
+import GlobalStyles from './styles/Global';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import { ThemeProvider } from 'styled-components';
@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Menu from './components/Sidebar';
 import SidebarProvider from './store/sidebar-context';
+import Contact from './components/Contact';
 
 const App: React.FC = () => (
   <SidebarProvider>
@@ -16,6 +17,7 @@ const App: React.FC = () => (
       <Header />
       <Hero />
       <Projects />
+      <Contact />
       <Footer />
     </ThemeProvider>
   </SidebarProvider>
