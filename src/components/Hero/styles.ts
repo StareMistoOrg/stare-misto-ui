@@ -41,9 +41,9 @@ export const HeroWrapper2 = styled.div<HeroWrapper2Props>`
 interface HeroHeadingProps {}
 
 export const HeroHeading = styled.h2<HeroHeadingProps>`
+  font-size: 4.5rem;
   line-height: 1.6;
   max-width: 800px;
-  font-size: 4.5rem;
   text-align: center;
 
   color: ${({ theme }) => theme.color.white};
@@ -57,14 +57,4 @@ export const HeroSubHeading = styled.span<HeroSubHeadingProps>`
   text-align: center;
 
   color: ${({ theme }) => theme.color.white};
-`;
-
-interface BtnGroupProps {}
-
-export const BtnGroup = styled.div<BtnGroupProps>`
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-
-  gap: ${({ theme }) => theme.space.oneandhalfunits};
 `;

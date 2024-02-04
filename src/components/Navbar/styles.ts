@@ -3,8 +3,8 @@ import styled from 'styled-components';
 interface DesktopMenuWrapperProps {}
 
 export const DesktopMenuWrapper = styled.div<DesktopMenuWrapperProps>`
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: space-between;
 `;
 
@@ -13,10 +13,11 @@ interface HomeLinksProps {
 }
 
 export const HomeLinks = styled.nav<HomeLinksProps>`
-  flex: 1;
-  display: flex;
   align-items: center;
+  display: flex;
+  flex: 1;
   justify-content: center;
+
   flex-direction: ${({ $flexDirection }) => $flexDirection || 'row'};
 `;
 
@@ -27,8 +28,9 @@ interface HomeLinkProps {
 
 export const HomeLink = styled.a<HomeLinkProps>`
   transition: all 0.3s;
-  margin-left: ${({ theme }) => theme.space.twounits};
+
   color: ${({ color }) => color};
+  margin-left: ${({ theme }) => theme.space.twounits};
 
   &:first-child {
     margin-left: 0;

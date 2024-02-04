@@ -26,10 +26,12 @@ export const ButtonText = styled.button<ButtonTextProps>`
   border: 1px solid;
   transition: 0.3s;
   font-weight: bold;
+  font-size: 18px;
   border-color: transparent;
   background-color: transparent;
 
   color: ${({ theme }) => theme.color.white};
+  border-radius: ${({theme}) => theme.radius.radius4};
   padding: ${({ theme }) => `${theme.space.unit} ${theme.space.twounits}`};
 
   &:hover {

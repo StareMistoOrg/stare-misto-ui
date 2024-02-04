@@ -1,5 +1,6 @@
-import { Button, ButtonText } from '../../ui/Buttons';
-import { BtnGroup, HeroHeading, HeroSubHeading, HeroWrapper, HeroWrapper1, HeroWrapper2 } from './styles';
+import { BtnGroup } from '../../styles/Global';
+import { Button, ButtonText } from '../ui/Button';
+import { HeroHeading, HeroSubHeading, HeroWrapper, HeroWrapper1, HeroWrapper2 } from './styles';
 
 const Hero: React.FC = () => (
   <HeroWrapper>

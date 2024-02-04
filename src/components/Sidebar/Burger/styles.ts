@@ -4,20 +4,29 @@ interface StyledBurgerProps {
   open: boolean;
 }
 export const StyledBurger = styled.button<StyledBurgerProps>`
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: none;
+  flex-direction: column;
+  height: 2rem;
+  justify-content: space-around;
+  padding: 0;
+  width: 2rem;
 
   &:focus {
     outline: none;
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
-    background: ${({ theme, open }) => (open ? theme.color.secondary : theme.color.primary100)};
     border-radius: 10px;
-    transition: all 0.3s linear;
+    height: 0.25rem;
     position: relative;
     transform-origin: 1px;
+    transition: all 0.3s linear;
+    width: 2rem;
+
+    background: ${({ theme, open }) => (open ? theme.color.secondary : theme.color.primary100)};
 
     &:first-child {
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
@@ -34,14 +43,6 @@ export const StyledBurger = styled.button<StyledBurgerProps>`
   }
 
   @media ${({ theme }) => theme.media.medium} {
-    background: transparent;
-    border: none;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    height: 2rem;
-    justify-content: space-around;
-    padding: 0;
-    width: 2rem;
   }
 `;
