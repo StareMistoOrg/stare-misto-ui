@@ -4,7 +4,7 @@ import Layout from './pages/Layout';
 import HomePage from './pages/Home';
 import AuthenticationPage from './pages/Authentication';
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: '/stare-misto-ui/',
     element: <Layout />,
@@ -19,7 +19,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL ? '/' : '/stare-misto-ui/' });
 
 const App: React.FC = () => <RouterProvider router={router} />;
 
