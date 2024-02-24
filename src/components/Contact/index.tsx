@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <ContactWrapper>
+    <ContactWrapper id='contact'>
       <ContactWrapper1>
         <h2>Написати Нам:</h2>
         <form

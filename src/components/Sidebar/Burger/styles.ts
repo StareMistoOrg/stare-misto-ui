@@ -13,6 +13,7 @@ export const StyledBurger = styled.button<StyledBurgerProps>`
   justify-content: space-around;
   padding: 0;
   width: 2rem;
+  z-index: 2;
 
   &:focus {
     outline: none;

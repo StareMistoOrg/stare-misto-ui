@@ -28,6 +28,7 @@ interface HomeLinkProps {
 
 export const HomeLink = styled.a<HomeLinkProps>`
   transition: all 0.3s;
+  text-decoration: none;
 
   color: ${({ color }) => color};
   margin-left: ${({ theme }) => theme.space.twounits};

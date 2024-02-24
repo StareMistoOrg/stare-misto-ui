@@ -69,7 +69,7 @@ export const ProjectsSubHeading = styled.h3<ProjectsSubHeadingProps>`
   line-height: 1.6;
   text-align: center;
 
-  color: ${({ theme }) => theme.color.gray500};
+  color: ${({ theme }) => theme.color.gray700};
 `;
 
 interface ProjectsListContainerProps {}

@@ -18,6 +18,7 @@ export const SidebarStyled = styled.nav<SidebarStyledProps>`
     top: 0;
     transition: transform 0.3s ease-in-out;
     width: 100%;
+    z-index: 1;
 
     background: ${({ theme }) => theme.color.white};
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
