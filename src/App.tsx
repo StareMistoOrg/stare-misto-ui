@@ -21,7 +21,7 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL ? '/' : '/stare-misto-ui' });
+const router = createBrowserRouter(routes);
 
 const App: React.FC = () => <RouterProvider router={router} />;
 
