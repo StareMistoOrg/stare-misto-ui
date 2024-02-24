@@ -9,6 +9,7 @@ export const HeroWrapper = styled.section<HeroWrapperProps>`
   height: auto;
   justify-content: center;
   width: 100%;
+  height: calc(100vh - 144px);
 
   background-color: ${({ theme }) => theme.color.primary100};
 `;
