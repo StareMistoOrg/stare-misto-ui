@@ -454,6 +454,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: auto;
   justify-content: center;
   width: 100%;
+  height: calc(100vh - 144px);
 
   background-color: ${({theme:e})=>e.color.primary100};
 `,ow=F.div`
