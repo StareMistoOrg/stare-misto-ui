@@ -1,14 +1,22 @@
 import { useContext } from 'react';
 import Navbar from '../Navbar';
-import { SidebarStyled } from './styles';
+import { SidebarActionWrapper, SidebarStyled } from './styles';
 import { SidebarContext } from '../../store/sidebar-context';
 import { createPortal } from 'react-dom';
+import Burger from './Burger';
 
 const Sidebar: React.FC = () => {
   const { open } = useContext(SidebarContext);
 
   const sidebarContent = (
-    <SidebarStyled open={open}>
+    <SidebarStyled
+      initial={{ x: '-100%' }}
+      animate={{ x: open ? 0 : '-100%' }}
+      transition={{ type: 'tween' }}
+    >
+      <SidebarActionWrapper>
+        <Burger />
+      </SidebarActionWrapper>
       <Navbar $flexDirection='column' />
     </SidebarStyled>
   );

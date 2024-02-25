@@ -23,6 +23,7 @@ interface HeaderProps {
 
 export const Header = styled.header<HeaderProps>`
   transition: all 0.2s ease-in;
+  z-index: 9;
 
   background-color: ${({ theme }) => theme.color.white};
   border-radius: ${({ $borderRadius }) => $borderRadius};

@@ -27,6 +27,8 @@ interface HomeLinkProps {
 }
 
 export const HomeLink = styled.a<HomeLinkProps>`
+  font-size: 18px;
+  font-weight: 600;
   transition: all 0.3s;
   text-decoration: none;
 

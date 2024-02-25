@@ -47,18 +47,14 @@ export const ProjectsContainer = styled.div<ProjectsContainerProps>`
   justify-content: flex-start;
 `;
 
-interface TitleContainerProps {}
-
-export const TitleContainer = styled.span<TitleContainerProps>`
-  color: ${({ theme }) => theme.color.primary100};
-  margin-bottom: ${({ theme }) => theme.space.oneandhalfunits};
-`;
-
 interface ProjectsHeadingProps {}
 
 export const ProjectsHeading = styled.h2<ProjectsHeadingProps>`
+  font-size: 48px;
   line-height: 1.6;
+  text-shadow: 2px 2px 4px ${({ theme }) => theme.color.primary100};
 
+  color: ${({ theme }) => theme.color.primary300};
   margin-bottom: ${({ theme }) => theme.space.oneandhalfunits};
 `;
 
@@ -69,14 +65,14 @@ export const ProjectsSubHeading = styled.h3<ProjectsSubHeadingProps>`
   line-height: 1.6;
   text-align: center;
 
-  color: ${({ theme }) => theme.color.gray700};
+  color: ${({ theme }) => theme.color.primary100};
 `;
 
 interface ProjectsListContainerProps {}
 
 export const ProjectsListContainer = styled.div<ProjectsListContainerProps>`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
 
   grid-gap: ${({ theme }) => theme.space.twounits};

@@ -1,27 +1,22 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-interface SidebarStyledProps {
-  open: boolean;
-}
+interface SidebarStyledProps {}
 
-export const SidebarStyled = styled.nav<SidebarStyledProps>`
+export const SidebarStyled = styled(motion.nav)<SidebarStyledProps>`
   display: none;
 
   @media ${({ theme }) => theme.media.medium} {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
-    padding: 2rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: transform 0.3s ease-in-out;
+    padding: 32px 48px 0px;
+    height: 100%;
+    position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 
     background: ${({ theme }) => theme.color.white};
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   }
 
   a {
@@ -36,4 +31,11 @@ export const SidebarStyled = styled.nav<SidebarStyledProps>`
 
     color: ${({ theme }) => theme.color.primary100};
   }
+`;
+
+interface SidebarActionWrapperProps {}
+
+export const SidebarActionWrapper = styled.div<SidebarActionWrapperProps>`
+  display: flex;
+  justify-content: end;
 `;

@@ -71,6 +71,9 @@ export const ProjectTitle = styled.h3<ProjectTitleProps>`
 interface ProjectDescriptionProps {}
 
 export const ProjectDescription = styled.p<ProjectDescriptionProps>`
+  max-height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 1.6;
 
   color: ${({ theme }) => theme.color.gray800};

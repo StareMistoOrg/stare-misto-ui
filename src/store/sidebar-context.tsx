@@ -4,13 +4,13 @@ interface SidebarState {
   open: boolean;
 }
 
+interface Action {
+  type: string;
+}
+
 interface SidebarContextProps {
   open: boolean;
   handleTriggerSidebar: () => void;
-}
-
-interface Action {
-  type: string;
 }
 
 export const SidebarContext = createContext<SidebarContextProps>({

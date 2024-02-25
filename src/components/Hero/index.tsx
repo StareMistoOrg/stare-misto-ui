@@ -10,7 +10,7 @@ const Hero: React.FC = () => (
         <HeroSubHeading>Міжнародний Благодійний Фонд</HeroSubHeading>
         <BtnGroup>
           <Button>Задонатити</Button>
-          <ButtonText>Про нас →</ButtonText>
+          <ButtonText>Про нас&nbsp;→</ButtonText>
         </BtnGroup>
       </HeroWrapper2>
     </HeroWrapper1>

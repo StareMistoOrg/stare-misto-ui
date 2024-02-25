@@ -9,7 +9,7 @@ export default createGlobalStyle`
 body {
   margin:0;
   padding: 0;
-  font-family: system-ui, sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 body::-webkit-scrollbar {

@@ -1,10 +1,11 @@
 import { DesktopMenuWrapper, HomeLink, HomeLinks } from './styles';
 
 const menuList = [
-  { id: 1, name: 'Home' },
-  { id: 2, name: 'About' },
-  { id: 4, name: 'Events' },
-  { id: 5, name: 'Contact', href: '#contact' },
+  { id: 1, name: 'Головна' },
+  { id: 2, name: 'Новини' },
+  { id: 3, name: 'Про Нас' },
+  { id: 4, name: 'Події' },
+  { id: 5, name: 'Написати Нам', href: '#contact' },
 ];
 interface NavbarProps {
   color?: string;

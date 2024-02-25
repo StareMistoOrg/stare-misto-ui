@@ -9,17 +9,16 @@ import { HeaderWrapper, Header, Logo, NavWrapper, HeaderContainer } from './styl
 
 const initHeaderStyle = {
   $borderRadius: '50px',
-  width: '90%',
   $maxWidth: theme.size.maxwidth,
+  width: '90%',
 };
 
 const headerStyleAfterScrolling = {
   $borderRadius: '0px',
-  $ZIndex: 99,
+  $maxWidth: 'unset',
   position: 'fixed',
   top: 0,
   width: '100%',
-  $maxWidth: 'unset',
 };
 
 const HeaderComponent: React.FC = () => {

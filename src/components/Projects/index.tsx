@@ -2,7 +2,6 @@ import Project from './Project';
 import { projects } from './mockProjectData';
 import {
   Projects,
-  TitleContainer,
   ProjectsHeading,
   ProjectsWrapper,
   ProjectsWrapper1,
@@ -16,13 +15,9 @@ const ProjectsComponent: React.FC = () => (
     <ProjectsWrapper>
       <ProjectsWrapper1>
         <ProjectsContainer>
-          <TitleContainer>
-            <span>Розіграші</span>
-            <br></br>
-          </TitleContainer>
-          <ProjectsHeading>Unlock the Power of Volunteering</ProjectsHeading>
+          <ProjectsHeading>Події</ProjectsHeading>
           <ProjectsSubHeading>
-            Join our volunteer organization and make a difference in your community
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, ducimus!
           </ProjectsSubHeading>
         </ProjectsContainer>
         <ProjectsListContainer>
